@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralTransformers .AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 1px;
+}
+
+.course-container {
+    display: flex;
+    max-width: 20px;
+    
+}
+
+.course {
+    margin-top: 0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}
+
+.course a:hover {
+    background-color: #ff4800;
+}
+
+.right{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    position: fixed;
+    right: 0; 
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    font-size: 20px;
+    width:20%;
+    
+    
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    text-decoration: none;
+    
+}
+
+li a.activecolor {
+    background:  #a200ff;
+    color: white;
+    border-radius: 15px;
+    cursor:pointer;
+    margin:4px;
+    
+    
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(98, 0, 155);
+    color: white;
+}
+
+ .topic {
+            
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 18px;
+            display: flex;
+
+        }
+.inactive{    
+    color: rgb(255, 255, 255);
+    cursor:pointer;
+    
+}
+        .subtopics {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease-out;
+            padding-left: 0px;
+            text-align: left;
+            margin-left: 20px;
+            color: rgb(255, 255, 255);
+            margin-top:5px;
+            text-decoration: none;
+            
+            
+        }
+
+        .subtopics.active {
+            max-height: 8000px; 
+            color: rgb(255, 255, 255);
+        }
+        .topiccontainer ul{
+            padding-bottom: 10px;
+            
+        }
+        
+        .subtopics li{
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            
+        }
+.bottom-div div{
+    margin-left:20px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+.container {
+         max-width:78%;
+         text-align: left;
+         margin: 20px 20px 20px 20px;
+         padding: 20px;
+         background-color: #f3f3f3;
+         border-radius: 20px;
+         float: left;
+         margin-right: 50px;
+     }
+.course-topic{
+    margin-top:0px;
+    padding:10px;
+    margin-bottom:20px;
+    background-color: #292626bb;
+}
+</style>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="icon.png">
+        </a>
+        <a href="logout.php" class="navbtn" style="color: rgb(255, 255, 255); text-decoration: none;">Logout</a>
+    </header>
+    
+    <div class="course-container">
+        
+        <ul class="right">
+            <div class="course-topic"><h3 style="margin:110px 0 10px 10px; color:#ffffff;  "><i class="fa-solid fa-sitemap" style="margin-right:5px;"></i>Course Content</h3></div> 
+            <div class="topiccontainer"> 
+           <li  onclick="toggleSubtopics(1)" style="text-align: left; margin: 0; padding: 0;"><a  class="activecolor"><i class="fa-solid fa-square-poll-vertical" style="margin-right:5px;"></i>Topic 1 - Statistics</a></li>
+            <div class="subtopics" id="subtopics-1">
+                <ul>
+                    <li><a href="">Statistics Essentials for Data Science</a></li>
+                    <li><a href="">Python for Data Science</a></li>
+                    <li><a href="">SQL</a></li>
+                    <li><a href="">Data Visualization with Python</a></li>
+                    <li><a href="">Machine Learning</a></li>
+                    <li><a href="">Tableau</a></li>
+                    <li><a href="">Industry Ready Project</a></li>
+                    <li><a href="">Master's Certificate</a></li>
+                    <li><a href="">Interview Preparation & Applying to Jobs</a></li>
+                    </ul>
+            </div></div>
+            <div class="topiccontainer" > 
+                <li  onclick="toggleSubtopics(2)"><a class="inactive"><i class="fa-brands fa-python" style="margin-right:5px;"></i>Topic 2 - Python</a></li>
+                 <div class="subtopics" id="subtopics-2">
+                     <ul>
+                        <li><a href="">Lesson 1- Introduction to Python</a></li>
+                        <li><a href="">Lesson 2- Data Types (List,Tuple,Dict,Set ect...)</a></li>
+                        <li><a href="">Lesson 3- Conditional Statements (If-Else-Elif)</a></li>
+                        <li><a href="">Lesson 4- Loops (For, While)</a></li>
+                        <li><a href="">Lesson 5- Functions ,Iterables,Iterator</a></li>
+                        <li><a href="">Lesson 6- File Handling, Exception Handling,Logging</a></li>
+                        <li><a href="">Lesson 7- OOps Concept Modular Coding</a></li>
+                         </ul>
+                 </div></div> 
+            <div class="topiccontainer" > 
+                <li  onclick="toggleSubtopics(3)"><a class="inactive"><i class="fa-solid fa-database" style="margin-right:5px;"></i>Topic 3 - SQL</a></li>
+                 <div class="subtopics" id="subtopics-3">
+                     <ul>
+                        <li><a href="">Lesson-8- Introduction</a></li>
+                        <li><a href="">Lesson-9- Introduction to SQL</a></li>
+                        <li><a href="">Lesson-10- Database Normalization and Entity Relationship (ER) Model</a></li>
+                        <li><a href="">Lesson-11- Installation and SetUp</a></li>
+                        <li><a href="">Lesson-12- Working with Operators, Constraints, and Data Types</a></li>
+                        <li><a href="">Lesson-13- Functions in SQL</a></li>
+                        <li><a href="">Lesson-14- Subqueries, Operators, and Derived Tables in SQL</a></li>
+                        <li><a href="">Lesson-15- Windows Functions in SQL</a></li>
+                        <li><a href="">Lesson-16- Working with Views</a></li>
+                        <li><a href="">Lesson-17- Stored Procedures and Triggers in SQL</a></li>
+                        <li><a href="">Lesson-18- Performance Optimization and Best Practices in SQL</a></li>
+                         </ul>
+                 </div></div>
+            <div class="topiccontainer" > 
+                <li  onclick="toggleSubtopics(4)"><a class="inactive"><i class="fa-solid fa-file" style="margin-right:5px;"></i>Topic 4 - Data Visualisation</a></li>
+                 <div class="subtopics" id="subtopics-4">
+                     <ul>
+                        <li>Lesson 01 - Data Science Overview</li>
+        <li><a href="">Lesson 19 - Data Analytics Overview</a></li>
+        <li><a href="">Lesson 20 - Statistical Analysis and Business Applications</a></li>
+        <li><a href="">Lesson 21 - Python Environment Setup and Essentials</a></li>
+        <li><a href="">Lesson 22 - Mathematical Computing with Python (NumPy)</a></li>
+        <li><a href="">Lesson 23 - Scientific Computing with Python (SciPy)</a></li>
+        <li><a href="">Lesson 24 - Data Manipulation with Pandas</a></li>
+        <li><a href="">Lesson 25 - Machine Learning with Scikit-learn</a></li>
+        <li><a href="">Lesson 26 - Natural Language Processing with Scikit-learn</a></li>
+        <li><a href="">Lesson 27 - Data Visualization in Python using Matplotlib.</a></li>
+        <li><a href="">Lesson 28 - Web Scraping with Beautiful Soup</a></li>
+                         </ul>
+                 </div></div>
+            <div class="topiccontainer" > 
+                <li  onclick="toggleSubtopics(5)"><a class="inactive"><i class="fa-solid fa-brain" style="margin-right:5px;"></i>Topic 5 - Machine Learning</a></li>
+                 <div class="subtopics" id="subtopics-5">
+                     <ul>
+                        <li><a href="">Lesson 29 - Introduction to Artificial Intelligence and Machine Learning</a></li>
+                    <li><a href="">Lesson 30: Data Wrangling and Manipulation</a></li>
+                    <li><a href="">Lesson 31: Supervised Learning</a></li>
+                    <li><a href="">Lesson 32: Feature Engineering</a></li>
+                    <li><a href="">Lesson 33: Supervised Learning-Classification</a></li>
+                    <li><a href="">Lesson 34: Unsupervised Learning</a></li>
+                    <li><a href="">Lesson 35: Deep Learning</a></li>
+                    <li><a href="">Lesson 36: Ensemble Learning</a></li>
+                    <li><a href="">Lesson 37: Computer Vision</a></li>
+                    <li><a href="">Lesson 38: NLP Text Mining</a></li>
+                         </ul>
+                 </div></div>
+                <div class="topiccontainer" > 
+                <li  onclick="toggleSubtopics(6)"><a class="inactive"><i class="fa-solid fa-chart-pie" style="margin-right:5px;"></i>Topic 6 - Tableau</a></li>
+                 <div class="subtopics" id="subtopics-6">
+                     <ul>
+                        <li><a href="">Lesson 39 - Getting Started with Tableau</a></li>
+                    <li><a href="">Lesson 40 - Core Tableau in Topics</a></li>
+                    <li><a href="">Lesson 41 - Creating Charts in Tableau</a></li>
+                    <li><a href="">Lesson 42 - Working with Metadata 17</a></li>
+                    <li><a href="">Lesson 43 - Filters in Tableau</a></li>
+                    <li><a href="">Lesson 44 - Applying Analytics to the Worksheet</a></li>
+                    <li><a href="">Lesson 45 - Dashboards in Tableau</a></li>
+                    <li><a href="">Lesson 46 - Modifications to Data Connections</a></li>
+                    <li><a href="">Lesson 47 - Introduction to Level of Details in Tableau (LODS)</a></li>
+                         </ul>
+                 </div></div>
+            
+            
+        </ul>
+    </div>
+    
+
+        <main>
+            <br><br><br><br><br><br><br><br>
+            <section class="course">
+                <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/ac90d3bd171ce4c725/764dd9dcf5aade91' width='1000' height='400' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
+            </section>
+        </main>
+    </div>
+    <div class="container">
+        <style>
+         
+        .bottom-title{
+         font-size:25px;
+        }
+        .bottom-title1{
+         font-size:19px;
+        }
+        .bottom-title2{
+         font-size:19px;
+         margin-left:0px;
+        }
+        
+        ul{
+            font-size:20px;
+        }
+        div.container1{
+            margin: 10px;
+            border-radius: 05px;
+            background-color: rgb(201, 201, 201);
+            font-size: 15px;
+        }
+        .container .about   {
+            margin:10px;
+        }
+        
+        </style>
+        <h2 class="bottom-title">Statistics Essentials for Data Science</h2>
+        
+        <h2 class="bottom-title1">About this course</h2>
+        <div class="container1">
+        <p class="about">"Statistics Essentials for Data Science" is a course designed to provide foundational knowledge of statistics, specifically tailored for individuals pursuing a career in data science. </p>
+        </div>
+        <h2 class="bottom-title2">Hosted by: host name</h2>
+        <h2 class="bottom-title2">Date:</h2>
+        
+    </div>
+    <section class="nav"></section>
+    <script>
+function toggleSubtopics(id) {
+    var activeSubtopics = document.getElementById("subtopics-" + id);
+    var allSubtopics = document.querySelectorAll('.subtopics');
+    
+    allSubtopics.forEach(function(subtopic) {
+        if (subtopic === activeSubtopics && !subtopic.classList.contains('active')) {
+            subtopic.classList.add('active');
+        } else {
+            subtopic.classList.remove('active');
+        }
+    });
+}
+
+    </script>
+</body>
+</html>

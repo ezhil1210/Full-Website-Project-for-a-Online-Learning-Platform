@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Curriculum</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .curriculum {
+            font-family: Arial, sans-serif;
+        }
+
+        .topic {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .subtopics {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease-out;
+            padding-left: 20px;
+        }
+
+        .subtopics.active {
+            max-height: 500px; /* Adjust the maximum height based on your content */
+        }
+
+        .subtopics div {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="curriculum">        
+        <h1 class="heading1"><i class="fa-solid fa-book"></i>  Course Curriculum</h1>
+        <ul >
+        <div class="topic" onclick="toggleSubtopics(1)">Topic 1 - Statistics</div>
+        <div class="subtopics" id="subtopics-1">
+            <ul>
+                <li>Statistics Essentials for Data Science</li>
+                <li>Python for Data Science</li>
+                <li>SQL</li>
+                <li>Data Visualization with Python</li>
+                <li>Machine Learning</li>
+                <li>Tableau</li>
+                <li>Industry Ready Project</li>
+                <li>Master's Certificate</li>
+                <li>Interview Preparation & Applying to Jobs</li>
+                </ul>
+        </div>
+
+        <div class="topic" onclick="toggleSubtopics(2)">Topic 2 - Python</div>
+        <div class="subtopics" id="subtopics-2">
+            <ul>
+                <li>Lesson 1- Introduction to Python</li>
+                <li>Lesson 2- Data Types (List,Tuple,Dict,Set ect...)</li>
+                <li>Lesson 3- Conditional Statements (If-Else-Elif)</li>
+                <li>Lesson 4- Loops (For, While)</li>
+                <li>Lesson 5- Functions ,Iterables,Iterator</li>
+                <li>Lesson 6- File Handling, Exception Handling,Logging</li>
+                <li>Lesson 7- OOps Concept Modular Coding</li>
+                
+            </ul>
+            
+        </div>
+        
+        <div class="topic" onclick="toggleSubtopics(3)">Topic 3 - SQL</div>
+        <div class="subtopics" id="subtopics-3">
+            <ul class="listed">
+                <li>Lesson-01- Introduction</li>
+                <li>Lesson-02- Introduction to SQL</li>
+                <li>Lesson-03- Database Normalization and Entity Relationship (ER) Model</li>
+                <li>Lesson-04- Installation and SetUp</li>
+                <li>Lesson-06- Working with Operators, Constraints, and Data Types</li>
+                <li>Lesson-07- Functions in SQL</li>
+                <li>Lesson-08- Subqueries, Operators, and Derived Tables in SQL</li>
+                <li>Lesson-09- Windows Functions in SQL</li>
+                <li>Lesson-10- Working with Views</li>
+                <li>Lesson-11- Stored Procedures and Triggers in SQL</li>
+                <li>Lesson-12- Performance Optimization and Best Practices in SQL</li>
+               
+                
+            </ul>            
+        </div>
+
+        <div class="topic" onclick="toggleSubtopics(4)">Topic 4 - Data Visualisation using Python</div>
+        <div class="subtopics" id="subtopics-4">
+            <ul>
+                <li>Lesson 01 - Data Science Overview</li>
+                <li>Lesson 02 - Data Analytics Overview</li>
+                <li>Lesson 03 - Statistical Analysis and Business Applications</li>
+                <li>Lesson 04 - Python Environment Setup and Essentials</li>
+                <li>Lesson 05 - Mathematical Computing with Python (NumPy)</li>
+                <li>Lesson 06 - Scientific Computing with Python (SciPy)</li>
+                <li>Lesson 07 - Data Manipulation with Pandas</li>
+                <li>Lesson 08 - Machine Learning with Scikit-learn</li>
+                <li>Lesson 09 - Natural Language Processing with Scikit-learn</li>
+                <li>Lesson 10 - Data Visualization in Python using Matplotlib.</li>
+                <li>Lesson 11 - Web Scraping with Beautiful Soup</li>
+               
+                
+</ul>
+        </div>
+
+        <div class="topic" onclick="toggleSubtopics(5)">Topic 5 - Machine Learning</div>
+        <div class="subtopics" id="subtopics-5">
+            <ul>
+                <li>Lesson 01 - Introduction to Artificial Intelligence and Machine Learning</li>
+                <li>Lesson 02: Data Wrangling and Manipulation</li>
+                <li>Lesson 03: Supervised Learning</li>
+                <li>Lesson 04: Feature Engineering</li>
+                <li>Lesson 05: Supervised Learning-Classification</li>
+                <li>Lesson 06: Unsupervised Learning</li>
+                <li>Lesson 07: Deep Learning</li>
+                <li>Lesson 08: Ensemble Learning</li>
+                <li>Lesson 09: Computer Vision</li>
+                <li>Lesson 10: NLP Text Mining</li>
+                
+               
+                
+</ul>
+        </div>
+
+        <div class="topic" onclick="toggleSubtopics(6)">Topic 6 - Tableau</div>
+        <div class="subtopics" id="subtopics-6">
+            <ul>
+                <li>Lesson 01 - Getting Started with Tableau</li>
+                <li>Lesson 02 - Core Tableau in Topics</li>
+                <li>Lesson 03 - Creating Charts in Tableau</li>
+                <li>Lesson 04 - Working with Metadata 17</li>
+                <li>LLesson 05 - Filters in Tableau</li>
+                <li>Lesson 06 - Applying Analytics to the Worksheet</li>
+                <li>Lesson 07 - Dashboards in Tableau</li>
+                <li>Lesson 08 - Modifications to Data Connections</li>
+                <li>Lesson 09 - Introduction to Level of Details in Tableau (LODS)</li>
+               
+                
+</ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSubtopics(id) {
+            var activeSubtopics = document.getElementById("subtopics-" + id);
+            var allSubtopics = document.querySelectorAll('.subtopics');
+            
+            allSubtopics.forEach(function(subtopic) {
+                if (subtopic === activeSubtopics) {
+                    subtopic.classList.toggle('active');
+                } else {
+                    subtopic.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

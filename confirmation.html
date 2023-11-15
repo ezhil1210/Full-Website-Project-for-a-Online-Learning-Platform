@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <title>Course Payment</title>
+    <style>
+                header img{
+    margin-left: 30px;
+}
+    
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background: rgb(94, 93, 148);
+    padding:2px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: left;
+}
+
+
+   
+
+header .navbar a{
+    font-size: 20px;
+    padding:0 1.5rem;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('./image/bgconfirmation.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            margin: 20px 0;
+            padding: 0px;
+        }
+
+        .container {
+            width: 40%;
+            backface-visibility: blur(20px);
+            color: #fff; 
+            padding: 20px;
+            margin-top: 600px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid white;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 13px;
+            font-weight: bold;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
+
+        .container {
+            text-align: left;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            
+            
+        }
+
+        .label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .input {
+            width: 90%; 
+            padding: 10px;
+            border: 1px solid #ffffff; 
+            border-radius: 5px;
+            font-size: 16px;
+            color: #0073e6; 
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            width: 48%;
+            padding: 10px;
+            background-image: linear-gradient(rgb(255, 72, 0), rgb(255, 0, 200));
+            color: #ffffff; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(rgb(255, 0, 34), rgb(195, 0, 255));
+        }
+        
+        .main{
+            padding: 5px 15px;
+        }
+        .back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .ui-datepicker {
+          background: #fff; 
+         color: rgb(255, 255, 255); 
+         }
+
+
+.ui-datepicker-calendar .ui-state-highlight {
+    background: #fafdff; 
+    color: #fff; 
+}
+#dob{
+    color:white;
+}
+::placeholder{
+    color:white;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(151, 151, 151); 
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgb(255, 102, 0), rgb(255, 0, 170));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(rgb(255, 60, 0), rgb(140, 0, 255));
+}
+    </style>
+</head>
+<body>
+    <a href="index.php" class="back-link">
+        <i class="fa-solid fa-angles-left fa-beat back-icon"></i>
+        <p class="backp">Back to home</p>
+    </a>
+    <div class="container">
+        <div class="main">
+            <h1>Confirmation</h1><br>
+            <h2 style="text-align: left;">Personal Information:</h2>
+            <label for="fullName" class="label" style="text-align: left;">Name:</label>
+            <input type="text" id="fullName" placeholder="name" class="input" required>
+
+            <label for="dob" class="label">Date of Birth:</label>
+            <input type="date" id="dob"  class="input" placeholder="dob" required>
+
+            <label for="phone" class="label" style="text-align: left;">Phone:</label>
+            <input type="text" id="phone"  class="input" placeholder="Phone number" required>
+
+            <label for="email" class="label" style="text-align: left;">Email:</label>
+            <input type="email" id="email" class="input" placeholder="Mail-id" required>
+            <br><br><br><br>
+            <h2 style="text-align: left;">Course Information:</h2>
+            <div class="form-group">
+                <label for="course">Course: </label>
+                <div id="course">
+                    <input type="number" id="specific" name="fee" value="30000" class="input" readonly style="max-width: 90%;">
+                </div>
+            </div>
+            <div>
+                <label for="fee" class="label">Fee (Including 18% GST):</label>
+                <input type="text" id="fee" name="fee" value="₹30,000" class="input" readonly>
+            </div>
+            <br>
+            <div class="buttons-container">
+                <button class="button" id="paytmButton">Pay with Paytm</button>
+                <button class="button" id="googlePayButton">Pay with GPay</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('paytmButton').addEventListener('click', function(event) {
+            validateForm();
+        });
+
+        document.getElementById('googlePayButton').addEventListener('click', function(event) {
+            validateForm();
+        });
+
+        function validateForm() {
+            var fullName = document.getElementById('fullName').value;
+            var dob = document.getElementById('dob').value;
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+
+            if (fullName.trim() === '') {
+            alert('Please enter your Name.');
+            return;
+        }
+
+            if (dob === '') {
+                alert('Please enter your Date of Birth.');
+                return;
+            }
+
+            var dobDate = new Date(dob);
+            var today = new Date();
+            var age = today.getFullYear() - dobDate.getFullYear();
+
+            if (age < 12) {
+                alert('You must be at least 18 years old to register.');
+                return;
+            }
+
+            if (phone === '') {
+                alert('Please enter your Phone Number.');
+                return;
+            }
+
+            var phoneRegex = /^[0-9]+$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Invalid Phone Number. Please enter digits only.');
+                return;
+            }
+            if (phone.length !== 10) {
+            alert('Invalid Phone Number. Please enter 10 digits.');
+            return;
+        }
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Invalid Email Address. Please enter a valid email.');
+                return;
+            }
+
+        }
+        $(document).ready(function () {
+        $('#dob').datepicker({
+            dateFormat: 'yy-mm-dd',  
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '1900:2023'  
+        });
+    });
+    
+        var urlParams = new URLSearchParams(window.location.search);
+        var defaultOption = urlParams.get('defaultOption');
+        document.getElementById('specific').value = defaultOption;
+    
+    </script>
+</body>
+</html>

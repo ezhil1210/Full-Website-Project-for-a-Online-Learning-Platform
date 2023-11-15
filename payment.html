@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <title>Course Payment</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('bgpayment.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .back-icon {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            padding: 0px;
+        }
+
+        .container {
+            max-width: 400px;
+            backface-visibility: blur(20px);
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid white;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 13px;
+            font-weight: bold;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
+
+        .fee-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .fee-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .fee-input {
+            width: 90%; 
+            padding: 10px;
+            border: 1px solid #ffffff; 
+            border-radius: 5px;
+            font-size: 16px;
+            color: #0073e6; 
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            width: 48%;
+            padding: 10px;
+            background-image: linear-gradient(rgb(255, 72, 0), rgb(255, 0, 200));
+            color: #ffffff; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(rgb(255, 0, 34), rgb(195, 0, 255));
+        }
+
+        option {
+            color: black;
+        }
+
+        .main {
+            padding: 5px 15px;
+        }
+        i{
+            color:#ffff;
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="index.php" class="back-link">
+        <i class="fa-solid fa-angles-left fa-beat back-icon"></i>
+        <p class="backp">Back to home</p>
+    </a>
+
+    <div class="container">
+        <div class="main">
+            <h1>Course Payment</h1>
+            <div class="form-group">
+                <label for="course">Course: </label>
+                <div id="course" >
+                    <input type="text" id="specific" name="fee" value="₹30,000" class="fee-input" readonly style="max-width: 90%;" placeholder="Course">
+                </div>
+            </div>
+            <div class="fee-container">
+                <label for="fee" class="fee-label">Fee (Including 18% GST):</label>
+                <input type="text" id="fee" name="fee" value="30,000 INR" class="fee-input" readonly>
+            </div>
+            <hr>
+
+            <a href="confirmation.html">
+                <button class="button">Proceed</button>
+            </a>
+        </div>
+    </div>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var defaultOption = urlParams.get('defaultOption');
+        document.getElementById('specific').value = defaultOption;
+    </script>
+</body>
+</html>

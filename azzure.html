@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralTransformers .AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+
+
+
+    <style>
+    
+      .black-bg{
+        position: absolute;
+        bottom:0;
+        right:0;
+        width:100%;
+        
+      }      
+      a{
+        text-decoration: none;
+      }
+      .heading1 {
+        text-align: center;
+        margin: 20px 20px 20px 5px;
+        padding: 20px;
+        text-align:left;
+        font-size: 27px;
+        border-radius: 20px;
+    
+      }   
+      .container {
+         max-width:99%;
+         text-align: center;
+         margin: 20px 20px 20px 20px;
+         padding: 20px;
+         background-color: #f3f3f3;
+         border-radius: 20px;
+         float: left;
+     }
+     h1{
+        margin:5px 20px;
+     }
+     ol{
+         font-size: 20px;
+         text-align: left;
+         margin-left: 50px;
+     }
+     p{
+        font-size: 20px;
+        margin-left: 50px;
+        text-align:left;
+     }
+     p.enroll{
+        font-size: 20px;
+        margin-left: 5px;
+        text-align:left;
+     }
+     .home{
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: url('bg.png') no-repeat center center fixed ;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.home .content{
+    
+    margin-left:30px;
+    display: flex;
+}
+.home .content img{
+    float:right;
+    border-radius:20px;
+    
+    
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color:#ffff;
+    margin-left:0px;
+}
+
+.home .content span{
+    font-size: 50px;
+    padding:1rem 0;
+    line-height: 1.5;
+    color:white;
+}
+.home .content p{
+    font-size: 60px;
+    margin-left:300px;
+    color:rgb(255, 255, 255);
+    padding:100px 0;
+    line-height: 1.0;
+    text-align: center;
+}
+main{
+    display: flex;
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    
+    
+}
+.enrollbtn{
+    background-image: linear-gradient(to right,rgba(68, 0, 253, 0.89), rgb(0, 238, 255));
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 20px;
+    margin: 3px 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 100%;
+}
+.container h1{
+    margin:5px;
+}
+.info{
+    text-align: left;
+    font-size: 20px;
+}
+@media (max-width: 768px) {
+            .container {
+                max-width: 100%; /* Adjust as needed */
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content img {
+                float: none;
+                width: 100%;
+            }
+            .content h3 {
+                font-size: 3rem; /* Adjust as needed */
+                margin-left: 0;
+            }
+            .content span {
+                font-size: 2rem; /* Adjust as needed */
+            }
+            .content p {
+                font-size: 1.5rem; /* Adjust as needed */
+                margin: 0;
+            }
+            main {
+                flex-direction: column;
+            }
+            #left, #right {
+                width: 100%;
+            }
+            .enrollbtn {
+                font-size: 1.5rem; 
+                padding: 10px 20px; 
+            }
+            .info {
+                font-size: 1.5rem; 
+            }
+        }
+        i{
+            margin-right:8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+                <img src="icon.png"></img></a>    
+        <nav class="navbar">
+            
+          <a href="aboutus.html" class="link" style="text-decoration:none;">About us</a>
+          <div class="dropdown">
+          
+          <a href="courses.html" class="link" style="text-decoration:none;">Courses</a>
+          <div class="dropdown-content">
+            <a href="datascience.html">Data Science</a>
+            <a href="courses.html#analysis">Data Analysis</a>
+            <a href="fullstack.html">Full Stack Devlopment</a>
+            <a href="courses.html">Python</a>
+            <a href="courses.html#sql">SQL</a>
+            <a href="azzure.html">Azure</a>
+          </div></div>
+    
+    
+          <a href="services.html" class="link" style="text-decoration:none;">Services</a>
+        </nav>
+         
+      
+    
+    </header>
+
+
+<section class="home" id="home">
+
+      
+    <div>
+      <div>
+        <div class="content">
+            <b><p>AZURE CERTIFICATION</p></b>
+            
+            
+        </div>
+     </div></div>
+    
+        
+    
+        
+        <br> <br> 
+</section>
+<main>
+    <div id="left">
+        <div class="container">
+        <h1 class="heading1">What is AZURE devops?</h1>
+        <p class="aboutp">Azure DevOps is a cloud-based tool
+            that helps software development
+            teams to work more efficiently. It
+            offers a set of services for managing
+            source code, tracking work, automating
+            builds and releases, and monitoring
+            applications. With Azure DevOps,
+            
+            teams can collaborate and
+            
+            communicate effectively to deliver
+            high-quality software faster and more
+            
+            securely.</p>
+        </div>
+        <div class="container">
+        <h1 class="heading1">WHY YOU NEED TO LEARN AZURE?</h1>
+        <ol class="listed">
+                <li>Azure DevOps enhances team collaboration and
+                    communication for better productivity and
+                    outcomes.</li>
+                <li>Automating software development with Azure
+                    DevOps enables faster delivery of high-quality
+                    software.</li>
+                <li>Azure DevOps enables automated testing and
+                    continuous integration for better software
+                    quality, security, and compliance.</li>
+                <li>Azure DevOps can scale to meet the needs of
+                    small and large teams, adapting to changing
+                    business needs.</li>
+                <li>With the growing adoption of cloud-based
+                    software development, learning Azure DevOps
+                    opens up new career opportunities.</li>
+        </ol>
+        </div>
+        <div class="container">
+        <h1 class="heading1">WHAT YOU WILL LEARN IN C#?</h1>
+        
+        <ol>
+        <li>Devops introduction</li>
+        <li>Azure Boards</li>
+        <li>Git and Azure Repos</li>
+        <li>CI/CD pipelines</li>
+        <li>Release pipelines</li>
+        <li>Docker and Kubernetes</li>
+        <li>Azure ARM templates</li>
+        <li>Azure integration</li>
+        <li>Powershell</li>
+        <li>Azure artifacts</li>
+        <li>Test plans</li>
+        <li>Integration sevral azure resorces with az devops</li>
+        </ol>
+    </div> 
+    <div class="container">
+        <h1 class="heading1">Technical roadmap:</h1>
+        <h1 class="heading1">Stage 1 - Configuring processes and
+            communications</h1>
+        
+        <p class="aboutp">It involves setting up effective
+            workflows and communication
+            channels to improve
+            collaboration, productivity, and
+            outcomes across the software
+            development lifecycle.</p>
+
+        <h1 class="heading1">Stage 2 - Design and implement
+            source control</h1>
+            <p class="aboutp">It involves creating an effective version
+                control system that enables teams to
+                manage and track changes to source
+                code, collaborate on code changes, and
+                deliver high-quality software with
+                greater speed and efficiency.</p>
+
+        <h1 class="heading1">Stage 3 - Design and implement
+            build and release pipelines</h1>
+         <p class="aboutp">It involves creating automated
+            workflowsthat build and deploy
+            software across different environments,
+            improving the speed and quality of
+            software delivery while minimizing
+            errors and downtime.</p>
+        <h1 class="heading1">Stage 4 - Develop a security and
+            compliance plan</h1>
+        <p class="aboutp">It involves identifying and
+            implementing security and compliance
+            measuresto ensure software and
+            infrastructure security, data privacy,
+            and regulatory compliance. This
+            enables organizationsto deliversecure
+            and trustworthy software to their
+            customers.</p>
+        <h1 class="heading1">Stage 5: Implement an instrumentation
+            strategy</h1>
+        <p class="aboutp">It involves setting up effective monitoring
+            and logging practices to collect and
+            analyze data across different software
+            components and environments. This
+            enables teams to identify and
+            troubleshoot issues faster, improve
+            application performance, and enhance the
+            overall user experiencere.</p>
+    </div>           
+    </div>
+
+    
+    
+    
+    
+    <div id="right" class="container">
+        <b><p class="enroll" style="margin-top: 30px;"><i class="fa-solid fa-money-check-dollar"></i>Course Fee:</p></b>
+            <b><p class="enroll">₹30000.00</p></b><br><br>
+
+        
+        <b><p class="enroll">Course Duration:</p></b>
+        <b><p class="enroll"><i class="fa-solid fa-calendar-days"></i>3 Months</p></b><br><br>
+
+        <b><p class="enroll">Course Features</p></b>
+        <b><p class="enroll "><ul style="text-align: left; margin-left:15px; font-size: 16px; list-style: disc;">
+            <i class="fa-solid fa-circle-check"></i><span></span>Internship Program<br>
+            <i class="fa-solid fa-circle-check"></i>Interview assurance<br>
+            <i class="fa-solid fa-circle-check"></i>Mock Interview<br>
+            <i class="fa-solid fa-circle-check"></i>Resume Preparation<br>
+            <i class="fa-solid fa-circle-check"></i>Both offline & online classes<br>
+        </ul></p></b>
+    
+        <a href="payment.html?defaultOption=Full Stack .NET Development"><br><br>
+            <div class="enrollbtn" >Enroll Now</div>
+        </a>
+    </div>
+    </div>
+
+
+
+
+
+    <footer>
+    <div class="black-bg" >
+        <div class="">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSepkEbn49yNjmrggwbAQSjxBtAWPKDNTICRFsqIEeZDspxqWw/viewform">
+                                <i class="fas fa-link"></i> Course Registration</a></li>
+                            <li><a href="mailto:admin@neuraltransformers.com"><i class="fas fa-envelope"></i> Email: admin@neuraltransformers.com</a></li>
+                            <li><a href="https://maps.app.goo.gl/GwSZXvcvtb2ZDRQ56"><i class="fas fa-map-marker-alt"></i> Address: S-7, 15th Avenue, 3rd Floor,<br> Jawaharlal Nehru Road, Ashok Nagar, Chennai - 600083</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="connect-with-us">
+                        <h4>Connect with us:</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/transformers_ai/" target="_blank">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Transformers_ai" target="_blank">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100091802811772&mibextid=ZbWKwL" target="_blank">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="https://twitter.com/Transformers_ai" target="_blank">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                            <a href="linkedin.com/company/transformers-ai/" target="_blank">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </div>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> Contact Us: 9342153224, 6369434981</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Neural Transformers_ai All Rights Reserved.<br>Website developed by: Kavin, Prajan, Ezhil</p>
+        </div>
+    </div>
+   </footer>
+</main>
+</body>
+</html>
+
+
+

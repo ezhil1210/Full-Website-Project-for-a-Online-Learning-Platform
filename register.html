@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Registration Page</title>
+    <style>body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('bg.jpg'); /* Replace 'background.jpg' with your image file */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .container {
+        display: flex;
+        background-color: rgba(24, 27, 31, 0.623);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    
+    .left-panel {
+        flex: 1;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .right-panel {
+        flex: 1;
+        padding: 40px;
+    }
+    .left-panel h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        margin-top:46%;
+    
+    }
+    
+    .left-panel p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .right-panel {
+        flex: 1;
+        padding: 50px;
+    }
+    
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .input-container {
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    
+    .icon {
+        position: absolute;
+        right: 10px;
+        font-size: 18px;
+        color: #fff;
+    }
+    
+    .input-container input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        outline: none;
+        font-size: 16px;
+        background: transparent;
+        position: relative;
+        caret-color: #fff;
+        color: #fff;
+    }
+    
+    .input-container input:focus + .icon {
+        color: #0056b3;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-bottom: 30px;
+    }
+    
+    button:hover {
+        background: #bebebe;
+    }
+    
+    h4 {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+    
+    .link-secondary {
+        color: #04ffab;
+        text-decoration: none;
+    }
+    
+    .link-secondary:hover {
+        text-decoration: underline;
+        
+    }
+    </style>
+</head>
+<body style="background: url('bg.jpg') no-repeat center center fixed; background-size: cover;">
+    <div class="container">
+        <div class="left-panel">
+            <h1>Welcome to Our Community!</h1>
+            <p>Create an account to join us.</p>
+        </div>
+        <div class="right-panel">
+            <form id="registration-form" action="register.php" method="post">
+                <h2>Register</h2>
+                <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <h4>Already have an account? <a href="login.html" class="link-secondary">Login</a></h4>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

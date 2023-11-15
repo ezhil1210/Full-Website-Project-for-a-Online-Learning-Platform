@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sign In</title>
+    <style>body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    background-color: rgba(24, 27, 31, 0.623);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 50px;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    margin: 36% 0px 10px 0px;
+}
+
+p {
+    color: white;
+
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    color: white;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.input-container{
+    margin-top: 25px ;
+}
+h2{
+    font-size: 30px;
+}
+button{
+    background-image: linear-gradient(to right,rgba(68, 0, 253, 0.89), rgb(0, 238, 255));
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    
+    cursor: pointer;
+    border-radius: 18px;
+}
+.link-secondary{
+    color: aquamarine;
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Welcome Back!</h1>
+            <p>Sign in to your account to continue.</p>
+        </div>
+        <div class="right-panel">
+            <form action="login.php" method="post">
+                <h2>Sign In</h2>
+
+                <div class="input-container">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="fas fa-user icon"></i>
+                </div><br>
+                <h4 >Don't have an account?   <a href="register.html" class="link-secondary">  Signup</a></h4>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
